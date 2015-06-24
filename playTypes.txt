@@ -1,0 +1,80 @@
+rules =
+    bettler:
+      name: 'Bettler'
+      description: 'Ohne Adut, kein Stich darf gewonnen werden.'
+      adut: false
+      playerStarts: true
+      points: 4
+      tricks: 0
+
+    assBettler:
+      name: 'Ass-Bettler'
+      description: 'Wie Bettler, Spieler besitzt ein oder mehrere Assen.'
+      adut: false
+      playerStarts: true
+      points: 5
+      tricks: 0
+
+    schnapser:
+      name: 'Schnapser'
+      description: 'Schnapsrunde, nach 3 Stichen müssen 66 Punkte erreicht werden.'
+      adut: true
+      playerStarts: true
+      points: 6
+      tricks: 3
+
+    schnapserMitPartner:
+      name: 'Schnapser mit Partner'
+      description: 'Wie Schnapser, aber der Partner spielt aus.'
+      adut: true
+      playerStarts: false
+      points: 6
+      tricks: 3
+
+    gang:
+      name: 'Gang'
+      description: 'Ohne Adut, alle Stiche.'
+      adut: false
+      playerStarts: true
+      points: 9
+      tricks: 5
+
+    zehnerLoch:
+      name: '10er-Loch'
+      description: 'Ohne Adut, alle Stiche, aber mit folgender Reihenfolge: 10-K-D-B-A'
+      adut: false
+      playerStarts: true
+      points: 10
+      tricks: 5
+
+    kontraSchnapser:
+      name: 'Kontra-Schnapser'
+      description: 'Wie Schnapser, aber der Gegner spielt aus.'
+      adut: false
+      playerStarts: false
+      points: 12
+      tricks: 3
+	
+    bauernSchnapser:
+      name: 'Bauernschnapser'
+      description: 'Mit Adut, alle Stiche.'
+      adut: true
+      playerStarts: true
+      points: 12
+      tricks: 5
+
+    bauernSchnapserMitPartner:
+      name: 'Bauernschnapser mit Partner'
+      description: 'Mit Adut, alle Stiche, aber der Partner spielt aus.'
+      adut: true
+      playerStarts: false
+      points: 12
+      tricks: 5   	
+
+    kontraBauernschnapser:
+      name: 'Kontra-Bauernschnapser'
+      description: 'Mit Adut, alle Stiche, aber der Gegner spielt aus.'
+      adut: true
+      playerStarts: false
+      points: 24
+      tricks: 5   	
