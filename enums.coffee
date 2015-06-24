@@ -1,5 +1,19 @@
-rules =
-    bettler:
+Enums =
+  CardColor:
+    Clubs:    0 #Kreuz
+    Spades:   1 #Pik
+    Hearts:   2 #Herz
+    Diamonds: 3 #Karo
+
+  CardType:
+    Jack:   0 #Bube
+    Queen:  1 #Dame
+    King:   2 #König
+    Ten:    3 #Zehner
+    Ace:    4 #Ass
+
+  PlayType:
+    Bettler:
       name: 'Bettler'
       description: 'Ohne Adut, kein Stich darf gewonnen werden.'
       adut: false
@@ -7,7 +21,7 @@ rules =
       points: 4
       tricks: 0
 
-    assBettler:
+    AssBettler:
       name: 'Ass-Bettler'
       description: 'Wie Bettler, Spieler besitzt ein oder mehrere Assen.'
       adut: false
@@ -15,7 +29,7 @@ rules =
       points: 5
       tricks: 0
 
-    schnapser:
+    Schnapser:
       name: 'Schnapser'
       description: 'Schnapsrunde, nach 3 Stichen müssen 66 Punkte erreicht werden.'
       adut: true
@@ -23,7 +37,7 @@ rules =
       points: 6
       tricks: 3
 
-    schnapserMitPartner:
+    SchnapserMitPartner:
       name: 'Schnapser mit Partner'
       description: 'Wie Schnapser, aber der Partner spielt aus.'
       adut: true
@@ -31,7 +45,7 @@ rules =
       points: 6
       tricks: 3
 
-    gang:
+    Gang:
       name: 'Gang'
       description: 'Ohne Adut, alle Stiche.'
       adut: false
@@ -39,7 +53,7 @@ rules =
       points: 9
       tricks: 5
 
-    zehnerLoch:
+    ZehnerLoch:
       name: '10er-Loch'
       description: 'Ohne Adut, alle Stiche, aber mit folgender Reihenfolge: 10-K-D-B-A'
       adut: false
@@ -47,15 +61,15 @@ rules =
       points: 10
       tricks: 5
 
-    kontraSchnapser:
+    KontraSchnapser:
       name: 'Kontra-Schnapser'
       description: 'Wie Schnapser, aber der Gegner spielt aus.'
       adut: false
       playerStarts: false
       points: 12
       tricks: 3
-	
-    bauernSchnapser:
+
+    BauernSchnapser:
       name: 'Bauernschnapser'
       description: 'Mit Adut, alle Stiche.'
       adut: true
@@ -63,18 +77,18 @@ rules =
       points: 12
       tricks: 5
 
-    bauernSchnapserMitPartner:
+    BauernSchnapserMitPartner:
       name: 'Bauernschnapser mit Partner'
       description: 'Mit Adut, alle Stiche, aber der Partner spielt aus.'
       adut: true
       playerStarts: false
       points: 12
-      tricks: 5   	
+      tricks: 5
 
-    kontraBauernschnapser:
+    KontraBauernschnapser:
       name: 'Kontra-Bauernschnapser'
       description: 'Mit Adut, alle Stiche, aber der Gegner spielt aus.'
       adut: true
       playerStarts: false
       points: 24
-      tricks: 5   	
+      tricks: 5
