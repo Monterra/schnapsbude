@@ -3,3 +3,5 @@ class Round
   playedCards: []
 
   constructor: (@game) ->
+
+module.exports = Round

@@ -16,7 +16,7 @@ Enums =
     Bettler:
       name: 'Bettler'
       description: 'Ohne Adut, kein Stich darf gewonnen werden.'
-      adut: false
+      trump: false
       playerStarts: true
       points: 4
       tricks: 0
@@ -24,7 +24,7 @@ Enums =
     AssBettler:
       name: 'Ass-Bettler'
       description: 'Wie Bettler, Spieler besitzt ein oder mehrere Assen.'
-      adut: false
+      trump: false
       playerStarts: true
       points: 5
       tricks: 0
@@ -32,7 +32,7 @@ Enums =
     Schnapser:
       name: 'Schnapser'
       description: 'Schnapsrunde, nach 3 Stichen müssen 66 Punkte erreicht werden.'
-      adut: true
+      trump: true
       playerStarts: true
       points: 6
       tricks: 3
@@ -40,7 +40,7 @@ Enums =
     SchnapserMitPartner:
       name: 'Schnapser mit Partner'
       description: 'Wie Schnapser, aber der Partner spielt aus.'
-      adut: true
+      trump: true
       playerStarts: false
       points: 6
       tricks: 3
@@ -48,7 +48,7 @@ Enums =
     Gang:
       name: 'Gang'
       description: 'Ohne Adut, alle Stiche.'
-      adut: false
+      trump: false
       playerStarts: true
       points: 9
       tricks: 5
@@ -56,7 +56,7 @@ Enums =
     ZehnerLoch:
       name: '10er-Loch'
       description: 'Ohne Adut, alle Stiche, aber mit folgender Reihenfolge: 10-K-D-B-A'
-      adut: false
+      trump: false
       playerStarts: true
       points: 10
       tricks: 5
@@ -64,7 +64,7 @@ Enums =
     KontraSchnapser:
       name: 'Kontra-Schnapser'
       description: 'Wie Schnapser, aber der Gegner spielt aus.'
-      adut: false
+      trump: false
       playerStarts: false
       points: 12
       tricks: 3
@@ -72,7 +72,7 @@ Enums =
     BauernSchnapser:
       name: 'Bauernschnapser'
       description: 'Mit Adut, alle Stiche.'
-      adut: true
+      trump: true
       playerStarts: true
       points: 12
       tricks: 5
@@ -80,7 +80,7 @@ Enums =
     BauernSchnapserMitPartner:
       name: 'Bauernschnapser mit Partner'
       description: 'Mit Adut, alle Stiche, aber der Partner spielt aus.'
-      adut: true
+      trump: true
       playerStarts: false
       points: 12
       tricks: 5
@@ -88,7 +88,9 @@ Enums =
     KontraBauernschnapser:
       name: 'Kontra-Bauernschnapser'
       description: 'Mit Adut, alle Stiche, aber der Gegner spielt aus.'
-      adut: true
+      trump: true
       playerStarts: false
       points: 24
       tricks: 5
+
+module.exports = Enums
