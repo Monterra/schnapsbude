@@ -1,2 +1,5 @@
 class Round
-  game: null
+  tricks: []
+  playedCards: []
+
+  constructor: (@game) ->

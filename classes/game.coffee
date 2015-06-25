@@ -1,2 +1,2 @@
 class Game
-  round: null
+  rounds: []
