@@ -2,10 +2,8 @@ class Team
   mainPoints: 0
   roundPoints: 24
 
-  player1: (Player) ->
-  player2: (Player) ->
-
   constructor:(@name) ->
 
+  initialize: (@player1, @player2) ->
 
 module.exports = Team
