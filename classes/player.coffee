@@ -1,7 +1,8 @@
 class Player
   cards: []
+  team: null
 
-  constructor: (@team, @name) ->
+  constructor: (@name) ->
 
 
 module.exports = Player

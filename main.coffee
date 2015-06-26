@@ -22,19 +22,16 @@ dealOut = (cards, dealOutOptions) ->
 
 ###################################
 
-Team teamA = new Team 'Team A'
-Team teamB = new Team 'Team B'
+playerOne = new Player 'Philipp'
+playerTwo = new Player 'Bettina'
+playerThree = new Player 'Dominik'
+playerFour = new Player 'Melanie'
 
-Player playerOne = new Player teamA, 'Philipp'
-Player playerTwo = new Player teamB, 'Bettina'
-Player playerThree = new Player teamA, 'Dominik'
-Player playerFour = new Player teamB, 'Melanie'
+teamA = new Team 'Team A', playerOne, playerThree
+teamB = new Team 'Team B', playerTwo, playerFour
 
-teamA.initialize(playerOne, playerThree)
-teamB.initialize(playerTwo, playerFour)
-
-console.log('Team A: ', playerOne.name, " + ", playerThree.name)
-console.log('Team A: ', playerTwo.name, " + ", playerFour.name)
+console.log teamA
+console.log teamB
 
 cards = [
   #Clubs
