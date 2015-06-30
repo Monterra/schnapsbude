@@ -1,5 +1,9 @@
 class Trick
-  constructor: (@round) ->
+  playedCards: []
 
+  constructor: (@round, @beginner) ->
+
+  start: () ->
+    
 
 module.exports = Trick
