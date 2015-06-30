@@ -7,7 +7,10 @@ class Round
 
   newTrick: () ->
     trick = new Trick(@, @game.teamA.playerA)
-    tricks.push(trick)
+    @tricks.push(trick)
     trick.start();
+
+  resetCards: () ->
+    @game.resetCards()
 
 module.exports = Round

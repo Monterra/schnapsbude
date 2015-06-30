@@ -1,4 +1,5 @@
 Round = require './round'
+Card = require './card'
 
 class Game
   rounds: []
@@ -34,7 +35,19 @@ class Game
 
   newRound: () ->
     round = new Round(@)
-    rounds.push(round)
+    @rounds.push(round)
     round.newTrick();
+
+  getPlayers: () ->
+    [
+      @teamA.playerA
+      @teamA.playerB
+      @teamB.playerA
+      @teamB.playerB
+    ]
+
+  resetCards: () ->
+    for player in @getPlayers()
+      player.resetCards()
 
 module.exports = Game
