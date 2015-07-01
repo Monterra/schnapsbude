@@ -7,4 +7,7 @@ class Player
   resetCards: () ->
     @cards.length = 0
 
+  nextPlayer: () ->
+    @team?.game?.nextPlayer @
+
 module.exports = Player

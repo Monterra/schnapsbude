@@ -32,6 +32,8 @@ class Game
   ]
 
   constructor: (@teamA, @teamB) ->
+    @teamA.game = @
+    @teamB.game = @
 
   newRound: () ->
     round = new Round(@)
@@ -41,10 +43,20 @@ class Game
   getPlayers: () ->
     [
       @teamA.playerA
-      @teamA.playerB
       @teamB.playerA
+      @teamA.playerB
       @teamB.playerB
     ]
+
+  nextPlayer: (player) ->
+    players = @getPlayers()
+    playerIndex = players.indexOf player
+    playerIndex++
+
+    if playerIndex >= players.length
+      playerIndex = 0
+
+    players[playerIndex]
 
   resetCards: () ->
     for player in @getPlayers()
