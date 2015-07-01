@@ -12,6 +12,16 @@ Enums =
     Ten:    3 #Zehner
     Ace:    4 #Ass
 
+  CardDistributionMode:
+    Knock:    0 #Klopfen
+    TakeOff:  1 #Abheben
+
+  PlayerEventType:
+    PlayCard: 0                     #Spieler spielt eine Karte
+    ChooseCardDistributionMode: 1   #Spieler wählt Karten-Verteilungsmodus
+    ChoosePlayType: 2               #Spieler wählt Spielart
+    CallCardColor: 3                #Spieler ruft Kartenfarbe
+
   PlayType:
     Bettler:
       name: 'Bettler'
@@ -92,5 +102,12 @@ Enums =
       playerStarts: false
       points: 24
       tricks: 5
+
+Enums.CardColorNames = {}
+for key, value of Enums.CardColor
+  Enums.CardColorNames[value] = key
+Enums.CardTypeNames = {}
+for key, value of Enums.CardType
+  Enums.CardTypeNames[value] = key
 
 module.exports = Enums

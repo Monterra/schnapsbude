@@ -1,7 +1,7 @@
 class Team
   mainPoints: 0
   roundPoints: 24
-  game: null
+  match: null
 
   constructor:(@name, @playerA, @playerB) ->
     @playerA.team = @

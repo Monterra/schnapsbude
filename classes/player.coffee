@@ -1,13 +1,25 @@
+Deck = require './deck'
+
 class Player
-  cards: []
+  cards: new Deck []
   team: null
 
   constructor: (@name) ->
 
   resetCards: () ->
-    @cards.length = 0
+    cards = new Deck []
 
   nextPlayer: () ->
-    @team?.game?.nextPlayer @
+    @team?.match?.nextPlayer @
+
+  callEvent: (eventType, data) ->
+    if eventType == @eventQueue?.eventType
+      @eventQueue.callback(data)
+      delete @eventQueue
+
+  waitForEvent: (eventType, callback) ->
+    @eventQueue =
+      eventType: eventType
+      callback: callback
 
 module.exports = Player
