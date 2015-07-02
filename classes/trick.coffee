@@ -4,8 +4,7 @@ class Trick
   constructor: (@round, @beginner) ->
 
   start: () ->
-    @beginner.waitForEvent(Enums.PlayerEventType.PlayCard, (cardIndex) =>
-      console.log(@beginner.cards.getAt(cardIndex).toString());
-      );
+    @beginner.waitForEvent Enums.PlayerEventType.PlayCard, (cardIndex) =>
+      console.log(@beginner.cards.getAt(cardIndex).toString())
 
 module.exports = Trick

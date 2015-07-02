@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Schnapsbude</title>
+
+    <script src="js/client.js"></script>
+  </head>
+  <body>
+
+    <div id="loginBox">
+      Bitte einen Namen eingeben:<br/>
+      <input id="userName" type="text" value="" /><br/>
+      <input id="logIn" type="button" value="Senden" />
+    </div>
+
+    <div id="infoBox" style="display:none">
+      <h1>Warte auf andere Spieler...</h1>
+      <h2 id="infoField"></h2>
+    </div>
+
+    <script>
+      function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+        vars[key] = value;
+        });
+        return vars;
+      }
+
+      document.getElementById('userName').value = getUrlVars()["name"];
+
+      document.getElementById('logIn').onclick = function ()  {
+        document.getElementById('loginBox').style.display = 'none';
+        document.getElementById('infoBox').style.display = 'block';
+        new Client(document.getElementById('userName').value)
+      };
+
+    </script>
+  </body>
+</html>
