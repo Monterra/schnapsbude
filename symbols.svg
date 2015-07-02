@@ -51,31 +51,21 @@
   </defs>
   <sodipodi:namedview inkscape:window-height="1027" inkscape:window-width="1601" inkscape:pageshadow="2" inkscape:pageopacity="0.0" guidetolerance="10.0" gridtolerance="10.0" objecttolerance="10.0" borderopacity="1.0" bordercolor="#666666" pagecolor="#ffffff" id="base" inkscape:zoom="7.030638" inkscape:cx="160.4514" inkscape:cy="174.98718" inkscape:window-x="71" inkscape:window-y="-8" inkscape:current-layer="svg2" inkscape:showpageshadow="false" width="208px" height="303px" showgrid="false" inkscape:window-maximized="1"/>
   <path style="fill:url(#linearGradient3411);fill-opacity:1;stroke:none;stroke-width:1.49999988;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="m 119.15674,105.98097 c -0.0264,0.90715 -0.5648,4.30918 -6.43148,9.93957 -5.64624,5.41886 -8.28286,6.06938 -9.07525,6.12644 0.79239,0.057 3.42901,0.7076 9.07525,6.12643 5.86668,5.63039 6.40504,9.03241 6.43148,9.93957 0.0265,-0.90715 0.56481,-4.30917 6.43149,-9.93957 5.64626,-5.41884 8.28287,-6.06938 9.07527,-6.12643 -0.7924,-0.0571 -3.42901,-0.70759 -9.07527,-6.12644 -5.86668,-5.63038 -6.40503,-9.03241 -6.43149,-9.93957 z" id="path2243" inkscape:connector-curvature="0"/>
-  <path id="b" d="m 61.312166,108.31338 c -4.28798,0.009 -7.774701,3.67385 -7.745836,8.16985 0.05972,9.53549 12.035808,16.43129 15.566325,23.96213 3.530517,-7.53084 15.531489,-14.42664 15.59121,-23.96213 0.02886,-4.496 -3.457856,-8.16089 -7.745837,-8.16985 -4.286986,-0.009 -7.832433,3.64 -7.845373,8.14497 -0.01294,-4.50497 -3.533503,-8.15393 -7.820489,-8.14497 z" style="fill:url(#linearGradient4567)" inkscape:connector-curvature="0"/>
+  <g id="heart" transform="translate(0,0)">
+	<path id="b" d="m 61.312166,108.31338 c -4.28798,0.009 -7.774701,3.67385 -7.745836,8.16985 0.05972,9.53549 12.035808,16.43129 15.566325,23.96213 3.530517,-7.53084 15.531489,-14.42664 15.59121,-23.96213 0.02886,-4.496 -3.457856,-8.16089 -7.745837,-8.16985 -4.286986,-0.009 -7.832433,3.64 -7.845373,8.14497 -0.01294,-4.50497 -3.533503,-8.15393 -7.820489,-8.14497 z" style="fill:url(#linearGradient4567)" inkscape:connector-curvature="0"/>
+	
+	<animateTransform id="heart-move-left" attributeName="transform" attributeType="XML" type="translate" fill="freeze" from="0 0" to="-50 0" dur="0.5s"/>
+	<animateTransform id="heart-move-up" begin="heart-move-left.end + 0.1" attributeName="transform" attributeType="XML" type="translate" fill="freeze" from="-50 0" to="25 -85" dur="1s"/>
+	<animateTransform id="heart-move-down" begin="heart-move-up.end + 0.1" attributeName="transform" attributeType="XML" type="translate" fill="freeze" from="25 -85" to="25 -45" dur="0.5s"/>
+  </g>
   <path style="fill:#000000;fill-opacity:1;stroke:none;stroke-width:2;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:3.9994173;stroke-dasharray:none;stroke-opacity:1" d="m 94.105298,62.288968 c -4.22976,0 -7.66496,3.43519 -7.66496,7.66496 1e-5,3.01284 1.73975,5.62019 4.27137,6.87012 0.76185,0.37615 -0.0695,1.34988 -0.62895,0.71881 -1.4049,-1.58487 -3.45378,-2.58494 -5.73663,-2.58494 -4.229759,0 -7.664969,3.43519 -7.664969,7.66496 0,4.22976 3.43523,7.65804 7.664969,7.65804 4.19735,0 7.62073,-3.37617 7.66496,-7.56128 0.008,-0.74243 1.14733,-0.81934 1.14733,0.1797 0,1.57322 -1.51247,9.92857 -2.3223,11.52163 0.88393,-0.22289 2.3571,-0.40778 3.26918,-0.40778 0.91209,0 2.38526,0.18489 3.26919,0.40778 -0.80983,-1.59306 -2.3223,-9.94841 -2.3223,-11.52163 0,-0.99904 1.13948,-0.92213 1.14732,-0.1797 0.0442,4.18511 3.46763,7.56128 7.664952,7.56128 4.22977,0 7.66496,-3.42828 7.66496,-7.65804 0,-4.22977 -3.43519,-7.66496 -7.66496,-7.66496 -2.28284,0 -4.331722,1.00007 -5.736612,2.58494 -0.55942,0.63107 -1.39081,-0.34266 -0.62896,-0.71881 2.531622,-1.24993 4.271362,-3.85728 4.271362,-6.87012 0,-4.22977 -3.435182,-7.66496 -7.664952,-7.66496 z" id="path3211" inkscape:connector-curvature="0"/>
   <path style="fill:#000000;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:0.67787051px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 93.772109,143.98755 c -5.422964,8.13445 -12.540604,12.87954 -12.540604,19.65825 0,6.10083 3.389353,7.45657 5.422964,7.45657 2.711482,0 4.745094,-1.35574 4.745094,-6.10083 0,-1.35575 1.355741,-1.35575 1.355741,0 0,6.7787 -1.355741,6.7787 -2.711482,10.16805 l 7.456575,0 c -1.355741,-3.38935 -2.711482,-3.38935 -2.711482,-10.16805 0,-1.35574 1.355741,-1.35574 1.355741,0 0,5.42296 2.033612,6.10083 4.745094,6.10083 2.03361,0 6.10083,-1.35574 6.10083,-7.45657 0,-6.8671 -7.795507,-11.5238 -13.218471,-19.65825 z" id="path4012" sodipodi:nodetypes="cssccccccssc" inkscape:connector-curvature="0"/>
-  <g style="stroke:#bbbbbb" id="g43" transform="translate(70,120)">
-    <line x1="0" y1="40" x2="25" y2="0" id="line45"/>
-    <line x1="50" y1="40" x2="25" y2="0" id="line47"/>
-    <line x1="0" y1="40" x2="25" y2="80" id="line49"/>
-    <line x1="50" y1="40" x2="25" y2="80" id="line51"/>
+  <g xmlns="http://www.w3.org/2000/svg" style="stroke:#bbbbbb" id="g43-6" transform="translate(95,80)">
+    <line x1="0" y1="40" x2="35" y2="-15" id="line45-6"/>    
+    <line x1="0" y1="40" x2="35" y2="95" id="line49-74"/>    
   </g>
-  <g style="stroke:#bbbbbb" id="g43-0" transform="translate(45,80)">
-    <line x1="0" y1="40" x2="25" y2="0" id="line45-1"/>
-    <line x1="50" y1="40" x2="25" y2="0" id="line47-1"/>
-    <line x1="0" y1="40" x2="25" y2="80" id="line49-1"/>
-    <line x1="50" y1="40" x2="25" y2="80" id="line51-8"/>
-  </g>
-  <g style="stroke:#bbbbbb" id="g43-1" transform="translate(70,40)">
-    <line x1="0" y1="40" x2="25" y2="0" id="line45-9"/>
-    <line x1="50" y1="40" x2="25" y2="0" id="line47-6"/>
-    <line x1="0" y1="40" x2="25" y2="80" id="line49-7"/>
-    <line x1="50" y1="40" x2="25" y2="80" id="line51-4"/>
-  </g>
-  <g style="stroke:#bbbbbb" id="g43-6" transform="translate(95,80)">
-    <line x1="0" y1="40" x2="25" y2="0" id="line45-6"/>
-    <line x1="50" y1="40" x2="25" y2="0" id="line47-5"/>
-    <line x1="0" y1="40" x2="25" y2="80" id="line49-74"/>
-    <line x1="50" y1="40" x2="25" y2="80" id="line51-5"/>
+  <g xmlns="http://www.w3.org/2000/svg" style="stroke:#bbbbbb" id="g43-0" transform="translate(45,80)">    
+    <line x1="50" y1="40" x2="15" y2="-15" id="line47-1"/>    
+    <line x1="50" y1="40" x2="15" y2="95" id="line51-8"/>
   </g>
 </svg>
