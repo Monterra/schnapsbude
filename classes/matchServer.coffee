@@ -35,7 +35,7 @@ class MatchServer
       #process HTTP request. Since we're writing just WebSockets server
       #we don't have to implement anything.
     server.listen @port, () =>
-      console.log 'listening on ' + @port
+      console.log 'Listening on Port ' + @port
 
     ws = new WebSocketServer
       httpServer: server
