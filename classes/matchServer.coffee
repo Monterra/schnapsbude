@@ -4,31 +4,22 @@ http = require('http')
 Match = require './match'
 Player = require './player'
 Team = require './team'
+Client = require './client'
 
 class MatchServer
-  playerOne: null
-  playerTwo: null
-  playerThree: null
-  playerFour: null
-
   playerCount: 0
-  sockets: []
+
+  clients: []
 
   constructor: (@port) ->
-    #@initGame()
     @initConnection()
 
   initGame: () ->
-    playerOne = new Player 'Philipp'
-    playerTwo = new Player 'Bettina'
-    playerThree = new Player 'Dominik'
-    playerFour = new Player 'Melanie'
+    teamA = new Team 'Team A', @clients[0].player, @clients[2].player
+    teamB = new Team 'Team B', @clients[1].player, @clients[3].player
 
-    teamA = new Team 'Team A', @playerOne, @playerThree
-    teamB = new Team 'Team B', @playerTwo, @playerFour
-
-    match = new Match teamA, teamB
-    match.newGame()
+    @match = new Match teamA, teamB
+    @match.newGame()
 
   initConnection: () ->
     server = http.createServer (request, response) ->
@@ -42,16 +33,38 @@ class MatchServer
 
     ws.on 'request', (request) =>
       socket = request.accept(null, request.origin)
-      @sockets.push(socket)
-
       @onConnection(socket)
 
-  onConnection: (socket) =>
-    @playerCount++
-    for aSocket in @sockets
-      aSocket.send(@playerCount)
+  sendToAll: (packet) ->
+    for client in @clients
+      client.send(packet)
 
-    socket.on 'message', (message) ->
-      console.log 'Hello ' + message.utf8Data
+  onConnection: (socket) =>
+    client = new Client(socket)
+    @clients.push(client)
+
+    socket.on 'message', (message) =>
+      try
+        packet = JSON.parse(message.utf8Data)
+      catch error
+        console.error('Error parsing packet: ' + message.utf8Data)
+
+      switch packet.id
+        when Enums.ClientPackets.NewPlayer
+          @playerCount++
+          client.setPlayer(new Player(packet.name))
+
+          @sendToAll
+            id: Enums.ServerPackets.PlayerCount
+            count: @playerCount
+
+          if @playerCount >= 4
+            @initGame()
+
+            for client in @clients
+              client.send
+                id: Enums.ServerPackets.NewRound
+                cards: client.player.cardDeck.getCards()
+
 
 module.exports = MatchServer

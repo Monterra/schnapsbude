@@ -1,13 +1,15 @@
 Deck = require './deck'
 
 class Player
-  cards: new Deck []
+  cardDeck: new Deck []
   team: null
 
   constructor: (@name) ->
 
-  resetCards: () ->
-    cards = new Deck []
+  setCardDeck: (@cardDeck) ->
+
+  resetCardDeck: () ->
+    @cardDeck = new Deck []
 
   nextPlayer: () ->
     @team?.match?.nextPlayer @

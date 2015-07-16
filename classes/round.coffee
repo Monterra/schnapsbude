@@ -32,13 +32,13 @@ class Round
     if @cardDistributionMode == Enums.CardDistributionMode.Knock
       while i < 4
         value = i * 5
-        player.cards = new Deck(cards.slice(value, value + 5))
+        player.setCardDeck(cards.slice(value, value + 5))
         player = player.nextPlayer()
         i++
     else
       while i < 4
         value = i * 3
-        player.cards = new Deck(cards.slice(value, value + 3).concat(cards.slice(12 + (i * 2), 14 + (i * 2))))
+        player.setCardDeck(new Deck(cards.slice(value, value + 3).concat(cards.slice(12 + (i * 2), 14 + (i * 2)))))
         player = player.nextPlayer()
         i++
 

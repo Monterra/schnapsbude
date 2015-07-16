@@ -61,6 +61,6 @@ class Match
 
   resetCards: () ->
     for player in @getPlayers()
-      player.resetCards()
+      player.resetCardDeck()
 
 module.exports = Match

@@ -1,3 +1,5 @@
+# out: enums.js
+
 Enums =
   CardColor:
     Clubs:    0 #Kreuz
@@ -21,6 +23,13 @@ Enums =
     ChooseCardDistributionMode: 1   #Spieler wählt Karten-Verteilungsmodus
     ChoosePlayType: 2               #Spieler wählt Spielart
     CallCardColor: 3                #Spieler ruft Kartenfarbe
+
+  ClientPackets:
+    NewPlayer: 0
+
+  ServerPackets:
+    PlayerCount: 0
+    NewRound: 1
 
   PlayType:
     Bettler:
@@ -110,4 +119,6 @@ Enums.CardTypeNames = {}
 for key, value of Enums.CardType
   Enums.CardTypeNames[value] = key
 
-module.exports = Enums
+module?.exports = Enums
+
+window?.Enums = Enums
